@@ -2,7 +2,21 @@
 
 @section('content')
 <div class="page-header"><h2> {{ $pageTitle }} <small> {{ $pageNote }} </small> </h2></div>
-@if(\Auth::user()->group_id != 7)
+@if(\Auth::user()->group_id == 7)
+<div class="toolbar-nav" >   
+	<div class="row">
+		<div class="col-md-8"> 	
+			@if($access['is_add'] ==1)
+			<a href="{{ url('insuranceclaims/create?return='.$return) }}" class="btn btn-default btn-sm"  
+				title="{{ __('core.btn_create') }}"><i class=" fa fa-plus "></i> Create New </a>
+			@endif   
+		</div>
+   
+	</div>	
+
+</div>
+
+@else
 <div class="toolbar-nav" >   
 	<div class="row">
 		<div class="col-md-8"> 	
@@ -57,7 +71,7 @@
 		</div>    
 	</div>	
 
-</div>	
+</div>
 @endif
 <div class="table-container">
 

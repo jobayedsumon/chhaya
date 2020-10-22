@@ -522,6 +522,9 @@
 							 jQuery('.dyanamic_contents select').each(function(key,val){
 								 jQuery(this).attr('required','true');
 							 });
+
+							 jQuery('#date_of_birth').removeAttr('required');
+							 jQuery('#address').removeAttr('required');
 						  }
 					   }
 					});
