@@ -20,7 +20,6 @@ use DB;
 
 class CitController extends Controller{
 
-
 	public function product($slug ){
 	    $tableData = [];
 		$product = Productinformation::where('slug',$slug)->where('status',1)->first();
@@ -330,7 +329,7 @@ class CitController extends Controller{
 
         $shurjopay_service = new ShurjopayService();
         $tx_id = $shurjopay_service->generateTxId();
-        $amount = 2;
+        $amount = $p;
 
         $order = new Insurancesubscriptions();
         $order->package_id = $package_id;
@@ -466,7 +465,7 @@ class CitController extends Controller{
 
         $shurjopay_service = new ShurjopayService();
         $tx_id = $shurjopay_service->generateTxId();
-        $amount = 2;
+        $amount = $p;
 
 
         $order = new Insurancesubscriptions();
