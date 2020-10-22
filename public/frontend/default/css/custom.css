@@ -103,12 +103,40 @@
     font-style: italic;
 }
 
+@media only screen and (max-width: 1450px) {
+    .section.banner-page.services {
+        height: 320px !important;
+    }
+}
+
 
 @media only screen and (max-width: 768px) {
  .packages .text_div{
 		padding: initial;
-	}
+    }
+    .right_side_about img{
+        display:none;
+    }
+    .desktop_logo {
+        display: none;
+    }
+
+    .section.banner-page.services {
+        height: 220px !important;
+    }
+   
 }
+
+@media only screen and (max-width: 450px) {
+    .section.banner-page.services {
+        background-size: 116% 89% !important;
+        height: 130px !important;
+        background-position: center !important;
+      }
+         
+   }
+
+
 
 @media (max-width:767px){
 

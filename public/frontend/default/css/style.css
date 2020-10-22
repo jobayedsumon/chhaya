@@ -2270,14 +2270,7 @@ margin-top: 10px !important;
 .footer-item img, .footer-item p, .in_desktop{
 	/*display:none !important;*/
 }
-.right_side_about img{
-	display:none;
-}
-.section.banner-page.services {
-  background-size: 116% 89% !important;
-  height: 130px !important;
-  background-position: center !important;
-}
+
 /*.bg_about {*/
 /*    padding: 15px 20px;*/
 /*}*/
@@ -2308,10 +2301,6 @@ margin-top: 10px !important;
 h2.caption-heading {
   margin-top: 50px !important;
 }
-.desktop_logo {
-  display: none;
-}
-
   .topbar {
     height: auto; }
 
