@@ -76,7 +76,11 @@ foreach($insurance_plan_ids as $ipId){
 									   <tr data-order="{{$insurance_plan->claim_amount}}">
 										  <td><img src="{{ asset('uploads/images/'.$insurance_plan->icon) }}" alt=""></td>
 										  <td>{{$insurance_plan->title}}</td>
-										  <td>@if($insurance_plan->claim_amount > 0){{'Taka '.$insurance_plan->claim_amount}}@else Yes @endif</td>
+										  <td>
+										  @if($insurance_plan->claim_amount > 0)
+										 	 {{'Taka '.$insurance_plan->claim_amount}} @if($insurance_plan->coverage_text)<br><small>{{$insurance_plan->coverage_text}}</small> @endif
+										  @else Yes 
+										  @endif</td>
 									   </tr>
 									 @endforeach
 									   
