@@ -37,6 +37,14 @@ foreach($prices as $p){
 	}
 }
 
+$insurance_plan_ids =  explode(',',$package->insurance_type);
+$totalCovarage = 0;
+foreach($insurance_plan_ids as $ipId){
+	$insuranceplan = \App\Models\Insuranceplans::find($ipId);
+	$totalCovarage += $insuranceplan->claim_amount;
+
+}
+
  ?>
    
 <section id="health_banner"></section>
@@ -55,7 +63,7 @@ foreach($prices as $p){
 								 <div>
 									<h4>Package Title: {{$package->title}}</h4>
 									<h4>Duration: {{ \App\Models\Periods::find($package->package_duration)->title }}</h4>
-									<h4>Coverage: BDT {{$price}} </h4>
+									<h4>Price: BDT {{$price}} <br><small>Coverage: Up to BDT {{$totalCovarage}}</small></h4>
 								 </div>
 							  </div>
 							  
